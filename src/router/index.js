@@ -10,7 +10,7 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/my-calendar',
+      path: '/',
       name: 'MyCalendar',
       component: MyCalendar
     },
