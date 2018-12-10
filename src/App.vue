@@ -22,17 +22,17 @@
       :value="true"
       color="#BD0034"
     >
-      <v-btn :to="{name: 'MyCalendar'}" flat color="white">
+      <v-btn exact :to="{name: 'MyCalendar'}" flat color="white">
         <span>나의 스케쥴</span>
         <v-icon>account_circle</v-icon>
       </v-btn>
 
-      <v-btn :to="{name:'NewEvent'}" flat color="white">
+      <v-btn exact :to="{name:'NewEvent'}" flat color="white">
         <span>내가 추천하기</span>
         <v-icon>add</v-icon>
       </v-btn>
 
-      <v-btn :to="{name:'EventAll'}" flat color="white">
+      <v-btn exact :to="{name:'EventAll'}" flat color="white">
         <span>스케쥴 추천</span>
         <v-icon>event</v-icon>
       </v-btn>

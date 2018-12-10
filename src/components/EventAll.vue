@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="py-2 px-0">
+  <div class="py-2 px-0">
     <div class="parent">
       <div class="child">
         <div class="card subheading">category</div>
@@ -14,14 +14,14 @@
         <div class="card subheading">category</div>
       </div>
     </div>
-    <v-container class="pa-0">
+    <div class="pa-0">
       <div class="px-3 pt-3">
         <h2 class="subheading font-weight-bold">추천 스케쥴</h2>
       </div>
       <div class="cs-swiper-wrapper">
-        <swiper style="width:100%;" :options="swiperOption">
+        <swiper :options="swiperOption">
 
-          <swiper-slide>
+          <swiper-slide v-for="(rec,index) in 5" :key="index">
             <v-card>
               <v-img
                 class="white--text"
@@ -45,82 +45,11 @@
               </v-card-title>
             </v-card>
           </swiper-slide>
-          <swiper-slide>
-            <v-card>
-              <v-img
-                class="white--text"
-                height="130px"
-                src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-              >
-                <v-container fill-height fluid>
-                  <v-layout fill-height>
-                    <v-flex xs12 align-end flexbox>
-                      <span class="headline">Top 10 Australian beaches</span>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
-              </v-img>
-              <v-card-title>
-                <div>
-                  <span class="grey--text">Number 10</span><br>
-                  <span>Whitehaven Beach</span><br>
-                  <span>Whitsunday Island, Whitsunday Islands</span>
-                </div>
-              </v-card-title>
-            </v-card>
-          </swiper-slide>
-          <swiper-slide>
-            <v-card>
-              <v-img
-                class="white--text"
-                height="130px"
-                src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-              >
-                <v-container fill-height fluid>
-                  <v-layout fill-height>
-                    <v-flex xs12 align-end flexbox>
-                      <span class="headline">Top 10 Australian beaches</span>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
-              </v-img>
-              <v-card-title>
-                <div>
-                  <span class="grey--text">Number 10</span><br>
-                  <span>Whitehaven Beach</span><br>
-                  <span>Whitsunday Island, Whitsunday Islands</span>
-                </div>
-              </v-card-title>
-            </v-card>
-          </swiper-slide>
-          <swiper-slide>
-            <v-card>
-              <v-img
-                class="white--text"
-                height="130px"
-                src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-              >
-                <v-container fill-height fluid>
-                  <v-layout fill-height>
-                    <v-flex xs12 align-end flexbox>
-                      <span class="headline">Top 10 Australian beaches</span>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
-              </v-img>
-              <v-card-title>
-                <div>
-                  <span class="grey--text">Number 10</span><br>
-                  <span>Whitehaven Beach</span><br>
-                  <span>Whitsunday Island, Whitsunday Islands</span>
-                </div>
-              </v-card-title>
-            </v-card>
-          </swiper-slide>
+          
         </swiper>
       </div>
-    </v-container>
-    <v-container class="pa-0">
+    </div>
+    <div class="pa-0">
       <v-layout>
         <v-flex>
           <div class="px-3 pt-3">
@@ -157,8 +86,8 @@
           </v-container>
         </v-flex>
       </v-layout>
-    </v-container>
-  </v-container>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -212,18 +141,19 @@ export default {
 .cs-swiper-wrapper {
   /* padding-left: 9px;
   padding-right: 9px; */
+  /* width: 100%; */
   position: relative;
   margin-top: 10px;
 }
 
 .swiper-container {
-  width: 100%;
+  /* width: 100%; */
   min-height: 250px;
   border-bottom: 3px solid #ccc;
 }
 
 .swiper-slide {
-  width: 81%;
+  width: 81% !important;
 }
 
 .v-card {
