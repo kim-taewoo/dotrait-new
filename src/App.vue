@@ -1,18 +1,17 @@
 <template>
   <v-app class="white">
  
-    <v-toolbar
+    <!-- <v-toolbar
       class="white"
       app
       dense
       flat
     >
       <v-btn style="left:10px;bottom:0px;" icon absolute><v-icon>view_headline</v-icon></v-btn>
+      <v-btn class="location-btn" small flat><v-icon class="mr-1" small>room</v-icon><span></span> 서울특별시 종로구 혜화동 <v-icon small>arrow_drop_down</v-icon></v-btn>
 
-      <v-toolbar-title>D<span style="color:#BD0034">O</span>TRAIT</v-toolbar-title>
-      <!-- <div>DOTRAIT</div> -->
       <v-btn style="right:10px;bottom:0px;" icon absolute><v-icon>search</v-icon></v-btn>
-    </v-toolbar>
+    </v-toolbar> -->
     <v-content>
       <router-view/>
     </v-content>
@@ -45,7 +44,6 @@ export default {
   data () {
     return {
       activeBtn: 0,
-      title: 'DOTRAIT'
     }
   },
   name: 'App'
@@ -59,4 +57,5 @@ html { overflow-y: auto }
   text-align: center;
   border-bottom: 1px solid rgb(165, 165, 165);
 }
+
 </style>
