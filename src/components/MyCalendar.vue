@@ -10,14 +10,17 @@
     </v-toolbar>
     <v-layout wrap justify-center align-center>
       <v-flex>
-        <v-card class="px-3 pt-3">
+        <div class="px-3 pt-3">
+          <h2 class="subheading font-weight-bold">추천 스케쥴</h2>
+        </div>
+        <v-card class="pt-3">
           <v-flex xs12 class="cs-cal-heatmap-container">
             <div id="cal-heatmap" style="overflowX:hidden;"></div>
           </v-flex>
           <v-layout>
             <v-flex class="xs12 text-xs-right">
-              <v-btn icon id="preBtn" class="primary"><v-icon>arrow_left</v-icon></v-btn>
-              <v-btn icon id="nextBtn" class="primary"><v-icon>arrow_right</v-icon></v-btn>
+              <v-btn icon id="preBtn" ><v-icon>arrow_left</v-icon></v-btn>
+              <v-btn icon id="nextBtn" ><v-icon>arrow_right</v-icon></v-btn>
             </v-flex>
 
           </v-layout>
@@ -140,11 +143,13 @@ export default {
         itemSelector: "#cal-heatmap",
         domain: "month",
         // subDomain: "day",
-        range: 3,
+        range: 2,
+        domainMargin: 8,
         cellSize: 28,
         displayLegend: false,
         nextSelector: "#nextBtn",
         previousSelector: "#preBtn",
+        domainGutter: 0,
         // subDomain:'x_day',
         weekStartOnMonday: true,
         domainLabelFormat: "%Y-%m",
@@ -174,5 +179,8 @@ export default {
   margin: 0 auto;
   width: 1;
   overflow: hidden;
+}
+.empty-calendar .graph .graph-rect {
+  fill: #afd9ee;
 }
 </style>
